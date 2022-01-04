@@ -28,5 +28,15 @@ class ideaStore{
 		}
 		return $list;
 	}
+
+	public function saveIdea(string $text){
+		$result = 0;
+		$sql = "INSERT INTO idea_store(name, date)VALUES(?, now())";
+		$stmt = $this->connection->prepare($sql);
+		$stmt->bind_param("s", ...[$text]);
+		$stmt->execute();
+		$result = $stmt->affected_rows;
+		return $result;
+	}
 }
 ?>
