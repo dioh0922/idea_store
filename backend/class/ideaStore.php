@@ -3,7 +3,7 @@ class ideaStore{
 
 	private $connection = null;
 	public function __construct(){
-		require_once(dirname(__FILE__)."/../../env/connection_setting.php");
+		require_once(dirname(__FILE__)."/../../../env/connection_setting.php");
 		$this->connection = new mysqli($SQL_HOST, $SQL_USER, $SQL_PASS, $SQL_DB);
 		if ($this->connection->connect_error) {
 			$this->connection = null;

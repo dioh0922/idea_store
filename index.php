@@ -1,8 +1,8 @@
 <?php
-require_once(dirname(__FILE__)."/backend/ideaStore.php");
+require_once(dirname(__FILE__)."/backend/class/ideaStore.php");
 try{
-$store = new ideaStore();
-$list = $store->getIdeaList();
+	$store = new ideaStore();
+	$list = $store->getIdeaList();
 }catch(Exception $e){
 	echo $e->getMessage();
 	exit();
@@ -12,7 +12,7 @@ $list = $store->getIdeaList();
 <html lang="ja" dir="ltr">
 	<head>
 		<meta charset="utf-8">
-		<title></title>
+		<title>開発ネタ帳</title>
 	</head>
 	<body>
 			<table>
