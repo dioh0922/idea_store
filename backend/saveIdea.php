@@ -5,7 +5,7 @@ if(isset($_POST["text"]) && $_POST["text"] !== ""){
 	try{
 		$store = new ideaStore();
 		$affected = $store->saveIdea($_POST["text"]);
-		if($$affected > 0){
+		if($affected > 0){
 			$result["result"] = 1;
 		}else{
 			$result["result"] = 0;
