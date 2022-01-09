@@ -12,15 +12,20 @@ try{
 <html lang="ja" dir="ltr">
 	<head>
 		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  	<link href="./dist/css/output.css" rel="stylesheet">
 		<title>開発ネタ帳</title>
 	</head>
 	<body>
-			<table>
+			<h1 class="text-3xl font-bold underline">
+				test tailwind
+			</h1>
+			<table class="table-auto">
 				<thead>
-					<tr>
-						<th>ID</th>
-						<th>概要</th>
-						<th>日付</th>
+					<tr class="bg-gray-100">
+						<th class="px-4 py-2">ID</th>
+						<th class="px-4 py-2">概要</th>
+						<th class="px-4 py-2">日付</th>
 					</tr>
 				</thead>
 				<tbody>
