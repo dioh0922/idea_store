@@ -13,33 +13,37 @@ try{
 	<head>
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-  	<link href="./dist/css/output.css" rel="stylesheet">
+		<link rel="stylesheet" href="./node_modules/tachyons/css/tachyons.min.css">
 		<title>開発ネタ帳</title>
 	</head>
 	<body>
+		<div class="tc">
 			<h1 class="text-3xl font-bold underline">
 				test tailwind
 			</h1>
-			<table class="table-auto">
-				<thead>
-					<tr class="bg-gray-100">
-						<th class="px-4 py-2">ID</th>
-						<th class="px-4 py-2">概要</th>
-						<th class="px-4 py-2">日付</th>
-					</tr>
-				</thead>
-				<tbody>
-					<?php foreach($list as $item){ ?>
-						<tr>
-							<td><?php echo $item["id"] ?></td>
-							<td><?php echo $item["name"] ?></td>
-							<td><?php echo $item["idea_date"] ?></td>
+			<div class="bg-washed-blue">
+				<table style="margin:auto;">
+					<thead>
+						<tr class="bg-light-blue">
+							<th>ID</th>
+							<th>概要</th>
+							<th>日付</th>
 						</tr>
-					<?php } ?>
-				</tbody>
-		</table>
+					</thead>
+					<tbody>
+						<?php foreach($list as $item){ ?>
+							<tr class="stripe-dark">
+								<td><?php echo $item["id"] ?></td>
+								<td><?php echo $item["name"] ?></td>
+								<td><?php echo $item["idea_date"] ?></td>
+							</tr>
+						<?php } ?>
+					</tbody>
+				</table>
+			</div>
 
 			<div id="app"></div>
 			<script src="dist/index.js"></script>
+		</div>
 	</body>
 </html>

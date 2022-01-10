@@ -10,9 +10,10 @@
   "license": "ISC",
   "devDependencies": {
     "@types/node": "^17.0.8",
-    "autoprefixer": "^10.4.2",
-    "postcss": "^8.4.5",
-    "tailwindcss": "^3.0.12",
+    "tachyons": "^4.12.0",
     "typescript": "^4.5.4"
-  }
+  },
+	"style":[
+		"./node_modules/tachyons/css/tachyons.min.css"
+	]
 }

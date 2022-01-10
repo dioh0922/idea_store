@@ -1,6 +1,8 @@
 
 let p = document.createElement("p");
 let input = document.createElement("input");
+input.className = "bg-washed-blue ba br3"
+
 let button = document.createElement("button");
 button.textContent = "登録する";
 
