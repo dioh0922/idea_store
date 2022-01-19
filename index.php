@@ -21,27 +21,7 @@ try{
 			<h1 class="text-3xl font-bold underline">
 				test tailwind
 			</h1>
-			<div class="bg-washed-blue">
-				<table style="margin:auto;">
-					<thead>
-						<tr class="bg-light-blue">
-							<th>ID</th>
-							<th>概要</th>
-							<th>日付</th>
-						</tr>
-					</thead>
-					<tbody>
-						<?php foreach($list as $item){ ?>
-							<tr class="stripe-dark">
-								<td><?php echo $item["id"] ?></td>
-								<td><?php echo $item["name"] ?></td>
-								<td><?php echo $item["idea_date"] ?></td>
-							</tr>
-						<?php } ?>
-					</tbody>
-				</table>
-			</div>
-
+			<div class="tc" style="margin: auto;" id="idea-area"></div>
 			<div id="app"></div>
 			<script src="dist/index.js"></script>
 		</div>
