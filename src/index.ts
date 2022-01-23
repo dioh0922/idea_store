@@ -93,7 +93,24 @@ function loadIdeaTable(arr: any[]): boolean {
 		btn.type = "button";
 		btn.value = "完了";
 		btn.addEventListener("click", () => {
-			console.log(el.id);
+			p.textContent = "完了します";
+			const httpRequest = new XMLHttpRequest();
+			httpRequest.open("POST", "./backend/disableIdea.php");
+			httpRequest.onreadystatechange = () => {
+				if(httpRequest.readyState === 4 && httpRequest.status == 200){
+					const jsonText = httpRequest.responseText;
+					const json = JSON.parse(jsonText);
+					if(json.result == 1){
+						location.reload();
+					}else{
+						p.textContent = "登録に失敗しました";
+					}
+				}
+			}
+
+			let post_data: FormData = new FormData();
+			post_data.append("id", el.id);
+			httpRequest.send(post_data);
 		});
 
 		let btn_cell = document.createElement("td");

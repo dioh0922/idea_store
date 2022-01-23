@@ -1,13 +1,3 @@
-<?php
-require_once(dirname(__FILE__)."/backend/class/ideaStore.php");
-try{
-	$store = new ideaStore();
-	$list = $store->getIdeaList();
-}catch(Exception $e){
-	echo $e->getMessage();
-	exit();
-}
-?>
 <!DOCTYPE html>
 <html lang="ja" dir="ltr">
 	<head>
@@ -19,7 +9,7 @@ try{
 	<body>
 		<div class="tc">
 			<h1 class="text-3xl font-bold underline">
-				test tailwind
+				使用技術メモ
 			</h1>
 			<div class="tc" style="margin: auto;" id="idea-area"></div>
 			<div id="app"></div>

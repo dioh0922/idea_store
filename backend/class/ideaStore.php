@@ -38,5 +38,15 @@ class ideaStore{
 		$result = $stmt->affected_rows;
 		return $result;
 	}
+
+	public function disableIdea(int $id){
+		$result = 0;
+		$sql = "UPDATE idea_store SET is_delete = 1 WHERE id = ? LIMIT 1";
+		$stmt = $this->connection->prepare($sql);
+		$stmt->bind_param("i", ...[$id]);
+		$stmt->execute();
+		$result = $stmt->affected_rows;
+		return $result;
+	}
 }
 ?>
