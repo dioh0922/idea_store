@@ -7,13 +7,20 @@
 		<title>開発ネタ帳</title>
 	</head>
 	<body>
-		<div class="tc">
-			<h1 class="text-3xl font-bold underline">
-				使用技術メモ
-			</h1>
-			<div class="tc" style="margin: auto;" id="idea-area"></div>
-			<div id="app"></div>
-			<script src="dist/index.js"></script>
+		<div class="tc block-80 w-16 md:w-32 lg:w-48">
+			<section class="measure center">
+				<h1 class="text-3xl font-bold underline">
+					使用技術メモ
+				</h1>
+				<div class="">
+						<div class="">
+							<section class="center ph5" id="idea-area"></section>
+						</div>
+				</div>
+				<section id="app"></section>
+			</section>
+
 		</div>
+		<script src="dist/index.js"></script>
 	</body>
 </html>

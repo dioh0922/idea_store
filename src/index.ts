@@ -37,14 +37,16 @@ const idea_container = document.getElementById("idea-area");
 
 /* テーブル自体の変数 */
 const idea_table = document.createElement("table");
+idea_table.className = "b--black-20 mb4";
 
 /* テーブルのヘッダを生成 */
 const table_header = document.createElement("thead");
 const head_tr = document.createElement("tr");
-head_tr.className = "bg-light-blue";
+head_tr.className = "bg-light-blue w-9-ns";
 const head_item = ["ID", "概要", "日付", "完了"];
 head_item.forEach(item => {
 	let th_obj = document.createElement("th");
+	th_obj.className = "pb3 pr3";
 	th_obj.textContent = item;
 	head_tr.appendChild(th_obj);
 });
@@ -83,6 +85,7 @@ function loadIdeaTable(arr: any[]): boolean {
 		Object.keys(el).forEach(member => {
 
 			let cell = document.createElement("td");
+			cell.className = "pv2 pr5 center bb";
 			let cell_content = document.createElement("p");
 			cell_content.textContent = el[member];
 			cell.appendChild(cell_content);
@@ -90,6 +93,7 @@ function loadIdeaTable(arr: any[]): boolean {
 		});
 
 		let btn = document.createElement("input");
+		btn.className = "pv2 mr4 center fw3";
 		btn.type = "button";
 		btn.value = "完了";
 		btn.addEventListener("click", () => {
@@ -114,6 +118,7 @@ function loadIdeaTable(arr: any[]): boolean {
 		});
 
 		let btn_cell = document.createElement("td");
+		btn_cell.className = "pr5 center bb";
 		btn_cell.appendChild(btn);
 		idea.appendChild(btn_cell);
 		table_body?.appendChild(idea);
