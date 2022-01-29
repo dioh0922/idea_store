@@ -85,15 +85,16 @@ function loadIdeaTable(arr: any[]): boolean {
 		Object.keys(el).forEach(member => {
 
 			let cell = document.createElement("td");
-			cell.className = "pv2 pr5 center bb";
+			cell.className = "pv2 pr5 bb w-100";
 			let cell_content = document.createElement("p");
+			//cell_content.className = "tc center";
 			cell_content.textContent = el[member];
 			cell.appendChild(cell_content);
 			idea.appendChild(cell);
 		});
 
 		let btn = document.createElement("input");
-		btn.className = "pv2 mr4 center fw3";
+		btn.className = "pv2 mr4 fw3";
 		btn.type = "button";
 		btn.value = "完了";
 		btn.addEventListener("click", () => {
@@ -118,7 +119,7 @@ function loadIdeaTable(arr: any[]): boolean {
 		});
 
 		let btn_cell = document.createElement("td");
-		btn_cell.className = "pr5 center bb";
+		btn_cell.className = "pr5  bb ";
 		btn_cell.appendChild(btn);
 		idea.appendChild(btn_cell);
 		table_body?.appendChild(idea);

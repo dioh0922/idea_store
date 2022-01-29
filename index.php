@@ -6,15 +6,15 @@
 		<link rel="stylesheet" href="./node_modules/tachyons/css/tachyons.min.css">
 		<title>開発ネタ帳</title>
 	</head>
-	<body>
-		<div class="tc block-80 w-16 md:w-32 lg:w-48">
-			<section class="measure center">
+	<body class="bg-washed-green">
+		<div class="tc block-80 w-16 md:w-32 lg:w-48 ">
+			<section class="measure center  db">
 				<h1 class="text-3xl font-bold underline">
 					使用技術メモ
 				</h1>
 				<div class="">
-						<div class="">
-							<section class="center ph5" id="idea-area"></section>
+						<div class="di">
+							<section class="measure center" id="idea-area"></section>
 						</div>
 				</div>
 				<section id="app"></section>
