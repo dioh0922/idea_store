@@ -1,3 +1,3 @@
 # instlation
-npm install
-node_modules/typescript/bin/tsc
+- npm install
+- node_modules/typescript/bin/tsc
